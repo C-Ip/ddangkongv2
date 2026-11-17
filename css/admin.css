@@ -1,0 +1,14 @@
+body { background: #f4f6fa; padding-bottom: 8rem; }
+.admin { max-width: 760px; padding-top: 1.5rem; }
+.card-section { background: #fff; border: 1px solid #dde3ee; border-radius: .5rem; margin-bottom: .75rem; }
+.card-section > summary { padding: .85rem 1rem; font-weight: 600; cursor: pointer; }
+.card-section > .body { padding: 0 1rem 1rem; }
+.block { border-top: 1px dashed #cfd6e4; padding-top: .75rem; margin-top: .75rem; }
+.thumb { width: 48px; height: 48px; object-fit: contain; background: #607EAA; border-radius: .35rem; padding: 4px; }
+textarea { min-height: 7rem; }
+.action-bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+    background: #fff; border-top: 1px solid #dde3ee; padding: .6rem 0;
+    padding-bottom: calc(.6rem + env(safe-area-inset-bottom, 0px));
+}
+.status-ok { color: #1a7f37; } .status-err { color: #b42318; }

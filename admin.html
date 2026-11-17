@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Edit Ddangkong Manual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <main class="container admin">
+        <header class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <h1 class="h3 m-0">Edit Ddangkong Manual</h1>
+            <a class="btn btn-outline-secondary btn-sm" href="index.html">View site &rarr;</a>
+        </header>
+        <p class="text-muted small">
+            Changes are saved in <strong>this browser</strong> and show up on the site here.
+            To publish them for everyone, use <em>Export content.js</em> and replace <code>content.js</code> in the repo.
+        </p>
+        <form id="form" autocomplete="off"></form>
+    </main>
+
+    <div class="action-bar">
+        <div class="container d-flex flex-wrap align-items-center gap-2">
+            <button type="button" id="save" class="btn btn-primary">Save changes</button>
+            <button type="button" id="export" class="btn btn-outline-secondary">Export content.js</button>
+            <label class="btn btn-outline-secondary m-0">Import<input type="file" id="import" accept=".js,.json" hidden></label>
+            <button type="button" id="reset" class="btn btn-outline-danger ms-auto">Reset to defaults</button>
+            <span id="status" class="small w-100" role="status" aria-live="polite"></span>
+        </div>
+    </div>
+
+    <script src="content.js"></script>
+    <script src="js/site.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

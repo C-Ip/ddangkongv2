@@ -1,0 +1,191 @@
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 0;
+    /* Fluid type: ~1.1rem on phones up to 1.5rem on desktop */
+    font-size: clamp(1.1rem, 1rem + 0.8vw, 1.5rem);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    padding: 1rem 0.75rem;
+    line-height: 1.25;
+    overflow-wrap: break-word;
+}
+
+/* Fluid headings (Bootstrap's defaults are fixed at large breakpoints) */
+h1 { font-size: clamp(1.75rem, 1.2rem + 2.5vw, 2.75rem); }
+h2 { font-size: clamp(1.5rem, 1.1rem + 1.8vw, 2.25rem); }
+h3 { font-size: clamp(1.25rem, 1rem + 1.2vw, 1.75rem); }
+
+li {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-bottom: 0.35em;
+}
+
+ul {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- Navigation Bar ---------- */
+
+.container-fluid {
+    padding: 2% 7% 0;
+}
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+    font-weight: 700;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/* ---------- Spans ---------- */
+
+.large {
+    font-weight: bold;
+}
+
+/* ---------- Section Colors ---------- */
+
+.colored-section {
+    background-color: #607EAA;
+    color: #fff;
+}
+
+.white-section {
+    background-color: #fff;
+}
+
+/* Breathing room at the bottom of each section so content never touches the next */
+section {
+    padding-bottom: 1.5rem;
+}
+
+/* ---------- Lists ---------- */
+
+.list {
+    margin: auto;
+    /* Fills most of the screen on phones, caps out at a comfortable reading width */
+    width: min(92%, 48rem);
+    text-align: left;
+    padding-bottom: 1%;
+    padding-left: 1.25rem;
+    padding-right: 0.5rem;
+}
+
+/* ---------- Images ---------- */
+
+.cat-img {
+    margin-top: 1rem;
+    width: clamp(110px, 25vw, 170px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.img-small {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+
+.img-large {
+    margin-top: 1.5rem;
+    width: clamp(80px, 18vw, 110px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+/* ---------- Mobile / tablet nav ---------- */
+
+/* Below Bootstrap's `lg` breakpoint the menu collapses into the hamburger */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding-bottom: 2rem;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+        margin-top: 0.75rem;
+    }
+
+    .nav-item {
+        padding: 0;
+    }
+
+    .nav-link {
+        /* Comfortable touch target (~48px) */
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* ---------- Small screens ---------- */
+
+@media (max-width: 575.98px) {
+    .container-fluid {
+        padding: 3% 5% 0;
+    }
+
+    .navbar {
+        padding-bottom: 1.5rem;
+    }
+
+    .list {
+        width: 94%;
+        padding-left: 1.5rem;
+    }
+}
+
+/* ---------- Large screens ---------- */
+
+@media (min-width: 1400px) {
+    .list {
+        width: 50rem;
+    }
+}
+
+/* ---------- Respect reduced-motion preferences ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
